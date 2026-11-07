@@ -51,6 +51,26 @@ input,select,textarea{border:2px solid #9a7a53;border-radius:0;background:#fff5d
 .hot-slot small{position:absolute;bottom:0;right:3px;font:9px 'Press Start 2P';color:#fff5d5;text-shadow:1px 1px #382c20}
 .game-hint{background:#4e4934;color:#f6e7b8;border:3px solid #2f2b20;padding:8px 10px;font-size:12px;margin-top:9px}
 @media(max-width:540px){.hot-slot{width:39px;height:42px;font-size:20px}.game-topline{font-size:9px}.room{min-height:440px}}
+
+/* === Hand-crafted top-down pixel home scene === */
+.room{position:relative;min-height:560px;height:clamp(520px,72vw,720px);overflow:hidden;border:8px solid #68472f;border-radius:0;background-color:#c99866;background-image:repeating-linear-gradient(0deg,transparent 0 67px,#9b704a 68px 70px),repeating-linear-gradient(90deg,transparent 0 95px,#9b704a 96px 98px),linear-gradient(90deg,#d7a875 0 48%,#c99461 48% 50%,#d7a875 50% 100%);background-size:100% 70px,98px 100%,196px 100%;box-shadow:inset 0 0 0 5px #e9c28b}
+.room:before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;height:58px;background:repeating-linear-gradient(90deg,#ead5a7 0 45px,#d9bd8b 46px 48px);border-bottom:8px solid #80583a;box-shadow:0 4px 0 #553a29}
+.room:after{content:"";position:absolute;z-index:0;inset:66px 0 0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 68px,#8e603c44 69px 70px)}
+.roomname{display:none}
+.room-window{position:absolute;z-index:2;top:7px;left:calc(50% - 48px);width:96px;height:43px;background:#8c6342;border:5px solid #70492f;box-shadow:inset 0 0 0 3px #f2dfb8}
+.room-window:before{content:"";position:absolute;inset:4px;background:#9bcbd0}
+.room-window:after{content:"";position:absolute;left:43px;top:0;bottom:0;width:5px;background:#f0dfb8}
+.room-window i:first-child{position:absolute;z-index:2;left:0;right:0;top:17px;height:4px;background:#f0dfb8}
+.room-door{position:absolute;z-index:2;right:14px;top:0;width:48px;height:57px;background:#9b6840;border:5px solid #70472d;border-top:0;box-shadow:inset 0 0 0 3px #c28b56}
+.room-door:after{content:"";position:absolute;right:5px;top:30px;width:5px;height:5px;background:#f2d17b}
+.placed{position:absolute;z-index:3;display:block!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:0!important;overflow:visible!important;cursor:grab;touch-action:none;user-select:none;filter:drop-shadow(2px 3px 1px #4c321f55)}
+.placed svg{display:block;width:100%;height:100%;overflow:visible;image-rendering:pixelated}
+.placed span,.placed small{display:none!important}
+.placed.sel{outline:0!important;filter:drop-shadow(0 0 2px #fff4a6) drop-shadow(0 0 4px #fff4a6) drop-shadow(2px 3px 1px #4c321f55)}
+.placed.sel:after{content:"";position:absolute;left:8%;right:8%;bottom:-5px;height:5px;border-bottom:2px dashed #fff1a0}
+.game-hotbar{background:#58442f;border:4px solid #38291e}
+.hot-slot{background:#b58b5c;border:3px solid #543a27;box-shadow:inset 2px 2px #e5c48f}
+@media(max-width:540px){.room{height:560px;min-height:560px}.placed{filter:drop-shadow(2px 2px 1px #4c321f66)}}
 </style></head><body>
 <header class="top"><div class="brand"><div class="logo">🏡</div><div><h1>LITTLE HOME</h1><div class="muted">나만의 작은 집을 만들고, 하나씩 채워 가요 ♡</div></div></div><div class="actions"><button class="soft" id="export">내보내기 ↓</button><button class="soft" id="import">가져오기 ↑</button><button class="primary" id="save">저장하기 ♡</button></div></header>
 <main class="wrap"><div class="projectbar"><b>🏠 나의 프로젝트</b><select id="projects"></select><button id="newProject">＋ 새 집</button><button id="rename">이름 변경</button><button class="danger" id="deleteProject">삭제</button><span class="muted" id="saved">자동 저장 중</span></div>
