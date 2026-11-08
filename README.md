@@ -1,20 +1,26 @@
 # LITTLE HOME
 
-한국어 기반의 포근한 픽셀풍 집 꾸미기 및 이사 준비 도구입니다.
+A Korean-language furniture and home-shopping budget tracker with a refined 16-bit pixel-art inspired interface.
 
-## 현재 버전
-- 여러 집 프로젝트 생성, 이름 변경, 삭제
-- 거실·침실·주방·욕실 등 공간 추가 및 치수·배치 편집
-- 방 안 가구 드래그 배치, 크기와 좌표 조절
-- 필수 구매 / 후순위 위시리스트 구분
-- 가구별 예상 가격과 실제 구매 가격 기록
-- 전체 예산, 예상 배정액, 실제 지출, 남은 예산 계산
-- 상품 링크와 메모 기록
-- 브라우저 자동 저장, JSON 내보내기·가져오기
-- 공유 링크로 프로젝트 복사본 전달
+## Features
 
-## 저장과 공유 안내
-프로젝트는 현재 사용 중인 브라우저의 로컬 저장소에 저장됩니다. JSON 파일 또는 데이터가 포함된 공유 링크로 다른 사람에게 복사본을 전달할 수 있습니다. 로그인, 클라우드 동기화, 실시간 공동 편집은 아직 구현되지 않았습니다.
+- Add furniture and household items to a purchase list
+- Separate essential purchases from lower-priority items
+- Enter and edit item prices manually
+- Save product URLs for later reference
+- Automatically calculate total spending and remaining budget
+- Add multiple draft items, choose priorities, then save them to the list together
+- Edit saved items individually
+- Automatically save data in the browser
 
-## 개발
-정적 HTML/CSS/JavaScript로 구성되어 GitHub Pages에서 호스팅됩니다.
+## Privacy and separate use
+
+Little Home is a static website. Each visitor's list and budget are stored in that visitor's own browser using local storage. There is no shared account or central database, so people using separate browsers or devices have separate lists. Data does not automatically sync between devices or browsers.
+
+## Run locally
+
+Open `index.html` in a modern web browser.
+
+## Publish with GitHub Pages
+
+In the repository settings, open **Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, then save. GitHub will provide the public website URL after deployment.
